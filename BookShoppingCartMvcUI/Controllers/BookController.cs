@@ -214,6 +214,7 @@ public class BookController : Controller
             TempData["errorMessage"] = "Error on deleting the data";
         }
         return RedirectToAction(nameof(Index));
+        Console.WriteLine("printing");
     }
 
 }
