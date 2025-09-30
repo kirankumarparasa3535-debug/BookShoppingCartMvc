@@ -1,0 +1,36 @@
+﻿@model IEnumerable<Order>
+
+@{
+    ViewData["Title"] = "My Orders";
+}
+
+<h2>📦 My Orders</h2>
+
+@if (!Model.Any())
+{
+    <p>You have not placed any orders yet.</p>
+}
+else
+{
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Order Id</th>
+                <th>Date</th>
+                <th>Payment</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var order in Model)
+            {
+                <tr>
+                    <td>@order.Id</td>
+                    <td>@order.CreateDate.ToString("dd-MMM-yyyy")</td> 
+                    <td>@order.IsPaid</td>
+                    <td>@order.OrderStatus</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
