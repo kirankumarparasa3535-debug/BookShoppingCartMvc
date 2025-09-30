@@ -66,6 +66,8 @@ namespace BookShoppingCartMvcUI.Controllers
         {
             var orders = await _cartRepo.GetUserOrders();
             return View(orders);
+
+        return view(cart order);
         }
     }
 }
