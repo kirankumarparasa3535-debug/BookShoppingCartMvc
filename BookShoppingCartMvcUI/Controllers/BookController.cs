@@ -215,6 +215,7 @@ public class BookController : Controller
         }
         return RedirectToAction(nameof(Index));
         Console.WriteLine("printing");
+        Console.WritrLine("bookname");
     }
 
 }
