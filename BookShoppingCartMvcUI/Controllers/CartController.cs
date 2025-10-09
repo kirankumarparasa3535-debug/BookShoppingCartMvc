@@ -56,6 +56,7 @@ namespace BookShoppingCartMvcUI.Controllers
         public IActionResult OrderSuccess()
         {
             return View();
+            Console.WriteLine("Welcome to hyd");
         }
 
         public IActionResult OrderFailure()
